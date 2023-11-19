@@ -1,5 +1,5 @@
 <%
-out.print("<nav class='container-xxl navbar navbar-expand-lg bg-body-tertiary'>");
+out.print("<nav class='navbar navbar-expand-lg bg-body-tertiary'>");
 out.print("  <div class='container-fluid'>");
 out.print("    <div class='collapse navbar-collapse' id='navbarSupportedContent'>");
 out.print("      <ul class='navbar-nav me-auto mb-2 mb-lg-0'>");
@@ -29,7 +29,7 @@ out.print("        		<a class='nav-link dropdown-toggle' href='#' role='button' 
 out.print("            		Compromissos");
 out.print("          	</a>");
 out.print("          	<ul class='dropdown-menu'>");
-out.print("            		<li><a class='dropdown-item' href='#'>Cadastrar compromisso</a></li>");
+out.print("            		<li><a class='dropdown-item' href='./cadastroCompromisso.jsp'>Cadastrar compromisso</a></li>");
 out.print("            		<li><a class='dropdown-item' href='#'>Consultar compromissos</a></li>");
 out.print("          	</ul>");
 out.print("        </li>");

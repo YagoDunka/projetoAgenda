@@ -71,7 +71,7 @@
 					<div class="card-body">
 						<h5 class="card-title">Compromissos</h5>
 						<p class="card-text">Agende novos compromissos</p>
-						<a href="#" class="btn btn-primary">Adicionar</a>
+						<a href="./cadastroCompromisso.jsp" class="btn btn-primary">Adicionar</a>
 					</div>
 				</div>
 			</div>
