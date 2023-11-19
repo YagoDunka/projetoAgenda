@@ -98,7 +98,7 @@
         }
        	function validaDados(){	    	
            event.preventDefault();
-           var inputNome =  document.getElementById("nome")
+           var inputNome = document.getElementById("nome")
            var inputEmail = document.getElementById("local")
            var inputRua = document.getElementById("local")
            

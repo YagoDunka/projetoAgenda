@@ -16,55 +16,56 @@
 		<%@ include file="./menu.jsp"%>
 
 		<h1 class="text-center mt-5 mb-5">Cadastrar Locais</h1>
-		<form action="recebeDadosLocal.jsp?" method="POST">
+		<form action="recebeDadosLocal.jsp" method="POST">
 
-		<div class="row mb-3">
-			<div class="col">
-				<label class="form-label" for="cep">Informe cep</label> <input
-					class="form-control" maxlength="9" type="text" id="cep"
-					placeholder="Informe o cep (88000-000)" onblur="verEndereco()">
+			<div class="row mb-3">
+				<div class="col">
+					<label class="form-label" for="cep">Informe cep</label> <input
+						class="form-control" maxlength="9" type="text" id="cep"
+						placeholder="Informe o cep (88000-000)" onblur="verEndereco()">
+				</div>
+				<div class="col">
+					<label class="form-label" for="rua">Informe o Nome do Local</label>
+					<input class="form-control me-2" type="text" id="local"
+						placeholder="Nome do local">
+				</div>
 			</div>
-			<div class="col">
-				<label class="form-label" for="rua">Informe o Nome do Local</label>
-				<input class="form-control me-2" type="text" id="local"
-					placeholder="Nome do local">
+			<div class="row mb-3">
+				<div class="col">
+					<label for="rua">Informe a rua</label> <input
+						class="form-control me-2" type="text" id="rua"
+						placeholder="Informe a rua">
+				</div>
+				<div class="col">
+					<laber for="numero">Informe o número</laber>
+					<input class="form-control" type="number" id="numero"
+						placeholder="Informe o número">
+				</div>
 			</div>
-		</div>
-		<div class="row mb-3">
-			<div class="col">
-				<label for="rua">Informe a rua</label> <input
-					class="form-control me-2" type="text" id="rua"
-					placeholder="Informe a rua">
+			<div class="row mb-3">
+				<div class="col">
+					<laber for="numero">Informe o bairro</laber>
+					<input class="form-control" type="text" id="bairro"
+						placeholder="Informe o bairro">
+				</div>
+				<div class="col">
+					<laber for="numero">Informe o cidade</laber>
+					<input class="form-control" type="text" id="cidade"
+						placeholder="Informe a cidade">
+				</div>
+				<div class="col">
+					<laber for="numero">Informe o estado</laber>
+					<input class="form-control" type="text" id="estado"
+						placeholder="UF">
+				</div>
 			</div>
-			<div class="col">
-				<laber for="numero">Informe o número</laber>
-				<input class="form-control" type="number" id="numero"
-					placeholder="Informe o número">
-			</div>
-		</div>
-		<div class="row mb-3">
-			<div class="col">
-				<laber for="numero">Informe o bairro</laber>
-				<input class="form-control" type="text" id="bairro"
-					placeholder="Informe o bairro">
-			</div>
-			<div class="col">
-				<laber for="numero">Informe o cidade</laber>
-				<input class="form-control" type="text" id="cidade"
-					placeholder="Informe a cidade">
-			</div>
-			<div class="col">
-				<laber for="numero">Informe o estado</laber>
-				<input class="form-control" type="text" id="estado" placeholder="UF">
-			</div>
-		</div>
 
-		<div class="mt-5 d-flex justify-content-around">
-			<button onclick="verEndereco()" class="btn btn-primary">Ver
-				endereço</button>
-			<button onclick="validaDados()" class="btn btn-success">Enviar</button>
-			<input type="reset" class="btn btn-outline-danger" />
-		</div>
+			<div class="mt-5 d-flex justify-content-around">
+				<button onclick="validaDados()" class="btn btn-success">Enviar</button>
+				<button onclick="verEndereco()" class="btn btn-primary">Ver	endereço</button>
+				<input type="reset" class="btn btn-outline-danger" />
+			</div>
+		</form>
 		<div class="container-fluid">
 			<div class="row justify-content-center align-items-center"
 				style="height: 100vh;">
@@ -94,17 +95,21 @@
         }
        	function validaDados(){	    	
            event.preventDefault();
-           var inputNome =  document.getElementById("nome")
-           var inputEmail = document.getElementById("local")
-           var inputRua = document.getElementById("local")
+           var inputNome =  document.getElementById("nome");
+           var inputCep = document.getElementById("cep");
+           var inputRua = document.getElementById("rua");
+           var inputNumero = document.getElementById("numero");
+           var inputBairro = document.getElementById("bairro");
+           var inputCidade = document.getElementById("cidade");
+           var inputEstado = document.getElementById("estado");
            
            if(inputNome.value == ''){
                 alert("Informe o nome")
                 inputNome.focus()
                 return
            }
-           if(inputEmail.value == ''){
-           	alert("Informe o email")
+           if(inputCep.value == ''){
+           	alert("Informe o CEP")
            	inputEmail.focus()
            	return
            }
