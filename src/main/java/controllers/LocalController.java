@@ -10,6 +10,8 @@ import models.Local;
 import utils.Conexao;
 
 public class LocalController {
+	public LocalController() {
+	}
 	
 	public Local consultarByID(int id) {
 		Connection con = Conexao.conectar();

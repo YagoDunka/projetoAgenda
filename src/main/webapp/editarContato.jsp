@@ -1,7 +1,6 @@
 <%@page import="models.Contato"%>
 <%@page import="controllers.ContatoController"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +23,7 @@
 		%>
 
 		<h1 class="text-center mt-5 mb-5">Editar Contato</h1>
-		<form action="recebeDadosEditar.jsp?" method="POST">
+		<form action="recebeDadosEditar.jsp" method="POST">
 			<div>
 				<label class="form-label">ID</label> <input class="form-control"
 					type="text" readonly="readonly" name="id"
@@ -38,11 +37,12 @@
 			<div class="mt-3">
 				<label class="form-label">Informe email</label> <input
 					class="form-control" type="email" placeholder="Informe email"
-					name="email" value=<%out.print(contato.getEmail());%>>
+					name="email" id="email" value=<%out.print(contato.getEmail());%>>
 			</div>
 			<div class="mt-5 d-flex justify-content-between">
 				<button onclick="validaDados()" class="btn btn-outline-primary">Enviar</button>
-				<input type="reset" class="btn btn-outline-danger" />
+				<button onclick="cancelar()" class="btn btn-outline-danger">Cancelar</button>
+				<input type="reset" class="btn btn-outline-warning" />
 			</div>
 		</form>
 	</div>
@@ -51,6 +51,8 @@
 	        event.preventDefault();
 	    	
 	        var inputNome =  document.getElementById("nome")
+	        var inputEmail = document.getElementById("email")
+	        
 	        if(inputNome.value == ''){
 	             alert("Informe nome")
 	             inputNome.focus()
@@ -61,10 +63,11 @@
 	        	inputEmail.focus()
 	        	return
 	        }
-           document.getElementsByTagName("form")[0].submit()
+           document.getElementsByTagName("form")[0].submit();
 	    }
-	        
-	        
+	    function cancelar(){
+	    	window.location.href = "./consultaContato.jsp";
+	    }
 	</script>
 </body>
 </html>

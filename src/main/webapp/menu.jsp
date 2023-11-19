@@ -1,5 +1,5 @@
 <%
-out.print("<nav class='navbar navbar-expand-lg bg-body-tertiary'>");
+out.print("<nav class='container-xxl navbar navbar-expand-lg bg-body-tertiary'>");
 out.print("  <div class='container-fluid'>");
 out.print("    <div class='collapse navbar-collapse' id='navbarSupportedContent'>");
 out.print("      <ul class='navbar-nav me-auto mb-2 mb-lg-0'>");

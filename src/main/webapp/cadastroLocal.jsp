@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +25,7 @@
 				</div>
 				<div class="col">
 					<label class="form-label" for="rua">Informe o Nome do Local</label>
-					<input class="form-control me-2" type="text" id="local"
+					<input class="form-control me-2" type="text" id="nome"
 						placeholder="Nome do local">
 				</div>
 			</div>
@@ -37,36 +36,36 @@
 						placeholder="Informe a rua">
 				</div>
 				<div class="col">
-					<laber for="numero">Informe o nÃºmero</laber>
+					<label for="numero">Informe o número</label>
 					<input class="form-control" type="number" id="numero"
-						placeholder="Informe o nÃºmero">
+						placeholder="Informe o número">
 				</div>
 			</div>
 			<div class="row mb-3">
 				<div class="col">
-					<laber for="numero">Informe o bairro</laber>
+					<label for="numero">Informe o bairro</label>
 					<input class="form-control" type="text" id="bairro"
 						placeholder="Informe o bairro">
 				</div>
 				<div class="col">
-					<laber for="numero">Informe o cidade</laber>
+					<label for="numero">Informe o cidade</label>
 					<input class="form-control" type="text" id="cidade"
 						placeholder="Informe a cidade">
 				</div>
 				<div class="col">
-					<laber for="numero">Informe o estado</laber>
+					<label for="numero">Informe o estado</label>
 					<input class="form-control" type="text" id="estado"
 						placeholder="UF">
 				</div>
 			</div>
 
 			<div class="mt-5 d-flex justify-content-around">
-				<button onclick="validaDados()" class="btn btn-success">Enviar</button>
-				<button onclick="verEndereco()" class="btn btn-primary">Ver	endereÃ§o</button>
+				<button onclick="validaDados()" class="btn btn-outline-success">Enviar</button>
+				<button onclick="verEndereco()" class="btn btn-outline-secondary">Ver	endereço</button>
 				<input type="reset" class="btn btn-outline-danger" />
 			</div>
 		</form>
-		<div class="container-fluid">
+		<div class="container-fluid mt-5">
 			<div class="row justify-content-center align-items-center"
 				style="height: 100vh;">
 				<iframe
@@ -113,7 +112,7 @@
            	inputEmail.focus()
            	return
            }
-          document.getElementsByTagName("form")[0].submit() // Se tudo estiver preenchido, envia o formulÃ¡rio
+          document.getElementsByTagName("form")[0].submit() // Se tudo estiver preenchido, envia o formulário
        }
     </script>
 </body>

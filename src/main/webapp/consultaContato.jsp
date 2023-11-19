@@ -2,8 +2,8 @@
 <%@page import="models.Contato"%>
 <%@page import="utils.Conexao"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +18,7 @@
 <body class="bg-dark text-white">
 	<div class="container">
 		<%@ include file="./menu.jsp"%>
-		
+
 		<h1 class="text-center mt-5 mb-5">Contatos</h1>
 
 		<table class="table table-dark table-hover">
@@ -27,7 +27,7 @@
 					<th>Id</th>
 					<th>Nome</th>
 					<th>Email</th>
-					<th>AÃ§Ãµes</th>
+					<th>Ações</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -42,23 +42,26 @@
 					<td><%=contato.getNome()%></td>
 					<td><%=contato.getEmail()%></td>
 					<td>
-					    <!-- BotÃµes de editar e excluir com parÃ¢metros -->
-					    <a href='./editarContato.jsp?id=<%= contato.getId() %>' class='btn btn-outline-primary btn-sm'>Editar</a>
-					    <a href="javascript:void(0);" onclick="confirmarExclusao(<%= contato.getId() %>)" class='btn btn-outline-danger btn-sm'>Excluir</a>
+						<!-- Botões de editar e excluir com parâmetros --> <a
+						href='./editarContato.jsp?id=<%=contato.getId()%>'
+						class='btn btn-outline-primary btn-sm'>Editar</a> <a
+						href="javascript:void(0);"
+						onclick="confirmarExclusao(<%=contato.getId()%>)"
+						class='btn btn-outline-danger btn-sm'>Excluir</a>
 					</td>
 				</tr>
 				<%
 				}
 				%>
 			</tbody>
-			<script>
-			    function confirmarExclusao(id) {
-			        if (confirm('Tem certeza de que deseja excluir este contato?')) {
-			            window.location.href = './recebeDadosEditar.jsp?id=' + id + '&operacao=excluir';
-			        }
-			    }
-			</script>
 		</table>
 	</div>
+	<script>
+		function confirmarExclusao(id) {
+			if (confirm('Tem certeza de que deseja excluir este contato?')) {
+				window.location.href = './recebeDadosEditar.jsp?id=' + id + '&operacao=excluir';
+			}
+		}
+	</script>
 </body>
 </html>

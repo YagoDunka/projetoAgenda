@@ -2,8 +2,7 @@
 <%@page import="models.Local"%>
 <%@page import="utils.Conexao"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,12 +26,12 @@
 					<th>Id</th>
 					<th>Nome</th>
 					<th>Rua</th>
-					<th>NÃºmero</th>
+					<th>Número</th>
 					<th>Bairro</th>
 					<th>Cidade</th>
 					<th>Estado</th>
 					<th>Cep</th>
-					<th>AÃ§Ãµes</th>
+					<th>Ações</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -52,7 +51,7 @@
 					<td><%=local.getEstado()%></td>
 					<td><%=local.getCep()%></td>
 					<td>
-					    <!-- BotÃµes de editar e excluir com parÃ¢metros -->
+					    <!-- Botões de editar e excluir com parâmetros -->
 					    <a href='./editarLocal.jsp?id=<%= local.getId() %>' class='btn btn-outline-primary btn-sm'>Editar</a>
 					    <a href="javascript:void(0);" onclick="confirmarExclusao(<%= local.getId() %>)" class='btn btn-outline-danger btn-sm'>Excluir</a>
 					</td>
@@ -61,14 +60,14 @@
 				}
 				%>
 			</tbody>
-			<script>
-			    function confirmarExclusao(id) {
-			        if (confirm('Tem certeza de que deseja excluir este contato?')) {
-			            window.location.href = './recebeDadosEditarLocal.jsp?id=' + id + '&operacao=excluir';
-			        }
-			    }
-			</script>
 		</table>
 	</div>
+	<script>
+		function confirmarExclusao(id) {
+			if (confirm('Tem certeza de que deseja excluir este contato?')) {
+				window.location.href = './recebeDadosEditarLocal.jsp?id=' + id + '&operacao=excluir';
+			}
+		}
+	</script>
 </body>
 </html>
