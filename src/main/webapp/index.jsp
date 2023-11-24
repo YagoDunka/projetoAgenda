@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,11 +11,11 @@
 	crossorigin="anonymous">
 	<style>
         body {
-            max-height: 1000px; /* Defina a altura máxima desejada */
-            overflow-y: auto; /* Adiciona a barra de rolagem vertical quando necessário */
+            max-height: 1000px; 
+            overflow-y: auto; 
         }
          .custom-col {
-            width: 250px; /* Defina o tamanho desejado para as colunas */
+            width: 250px; 
             height: 100%;
         }
     </style>
